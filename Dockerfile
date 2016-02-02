@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM ubuntu:14.04
 MAINTAINER Dan Leehr <dan.leehr@duke.edu>
 
 # fetchChromSizes can use mysql, wget, or FTP
