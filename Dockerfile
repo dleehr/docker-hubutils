@@ -4,6 +4,7 @@ MAINTAINER Dan Leehr <dan.leehr@duke.edu>
 # fetchChromSizes can use mysql, wget, or FTP
 RUN apt-get update && apt-get install -y \
   wget \
+  curl \
   bedtools
 
 RUN mkdir /hubutils
@@ -15,5 +16,7 @@ RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bedGraphToBi
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/fetchChromSizes
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/hubCheck
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/twoBitToFa
+RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bigBedToBed
+
 RUN chmod +x /hubutils/*
 ENV PATH /hubutils:$PATH
