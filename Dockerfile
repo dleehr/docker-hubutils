@@ -17,6 +17,7 @@ RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/fetchChromSi
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/hubCheck
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/twoBitToFa
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bigBedToBed
+RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bigWigToBedGraph
 
 RUN chmod +x /hubutils/*
 ENV PATH /hubutils:$PATH
